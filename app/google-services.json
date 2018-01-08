@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "844735729890",
+    "firebase_url": "https://notes-db4c4.firebaseio.com",
+    "project_id": "notes-db4c4",
+    "storage_bucket": "notes-db4c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844735729890:android:d751d27e955a9aea",
+        "android_client_info": {
+          "package_name": "com.example.ef.databasecurseradapter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844735729890-58htd09bncovaeulp5vbrbistqcvfc0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJaBvgFCDp1hVi3m5ZObc67x7-nQSgXb0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

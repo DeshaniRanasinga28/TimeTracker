@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_title"
+            android:text="Add Notes"
+            android:textColor="@android:color/white"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:id="@+id/inputtext2">
+
+    <EditText
+        android:id="@+id/time_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/inputtext2"
+        android:layout_marginTop="5dp"
+        android:hint="Time" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_below="@+id/inputtext2"
+        android:layout_marginTop="2dp">
+
+    <EditText
+        android:id="@+id/notes_view"
+        android:layout_width="fill_parent"
+        android:layout_height="303dp"
+        android:layout_above="@+id/floatingActionButton2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="Notes" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/floatingActionButton3"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="102dp"
+        android:layout_marginStart="102dp"
+        android:onClick="onClickCancel"
+        android:src="@drawable/cancel_icon"
+        android:layout_marginBottom="14dp"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|left|end" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="14dp"
+        android:layout_toEndOf="@+id/floatingActionButton2"
+        android:layout_toRightOf="@+id/floatingActionButton2"
+        android:onClick="onClickSave"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/save_icon"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|right|end" />
+
+</RelativeLayout>

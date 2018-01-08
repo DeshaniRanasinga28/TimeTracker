@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.ef.databasecurseradapter.DetailsActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/AppTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_title"
+            android:text="Notes"
+            android:textColor="@android:color/white"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp"
+        android:layout_below="@+id/toolbar"
+        tools:ignore="NotSibling">
+
+    <TextView
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/time"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_view"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/time"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp"
+        android:layout_below="@+id/card_view">
+
+    <TextView
+        android:text="Notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/time_view"/>
+
+   <EditText
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/notes_view"
+        android:gravity="top"
+        android:layout_weight="1"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"/>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingEditActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view2"
+        android:layout_gravity="bottom|left"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/floatingDeletetActionButton"
+        android:layout_toStartOf="@+id/floatingDeletetActionButton"
+        android:onClick="onClickEdit"
+        android:src="@drawable/save_icon"
+        android:text="Edit"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|left|end" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingDeletetActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view2"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/floatingCancleActionButton"
+        android:layout_toStartOf="@+id/floatingCancleActionButton"
+        android:onClick="onClickDelete"
+        android:src="@drawable/delete_delete"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|left|end" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingCancleActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/card_view2"
+        android:layout_alignRight="@+id/card_view2"
+        android:layout_below="@+id/card_view2"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:onClick="onClickCancel"
+        android:src="@drawable/cancel_icon"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|left|end" />
+
+</RelativeLayout>
+
+
